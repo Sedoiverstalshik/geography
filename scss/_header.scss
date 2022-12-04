@@ -1,0 +1,92 @@
+.header {
+  // background-color: #081B2A;
+  color: var(--light_color);
+  font-family: 'Montserrat Alternates';
+  position: relative;
+  z-index: 3;
+
+  &__wrap {
+    @extend .flex-aic-jcsb;
+    gap: 15px;
+    padding: 0 125px;
+  }
+
+  &__menu-list {
+    @extend .flex-aic-jcc;
+    text-transform: uppercase;
+    background: #A62318;
+    border-radius: 0px 0px 4px 4px;
+    transition: all .3s linear;
+  }
+
+  li {
+    padding: 36px 15px 23px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url('../images/Rectangle\ 89.svg') no-repeat;
+      position: absolute;
+      left: -6px;
+      top: 58%;
+      width: 12px;
+      height: 18px;
+      display: block;
+      opacity: 0;
+
+    }
+
+    &:hover {
+      background: linear-gradient(0deg, #8A180E, #8A180E), #002F55;
+      border-radius: 0px 0px 4px 4px;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 90%;
+      letter-spacing: 0.07em;
+    }
+  }
+
+  &__phone {
+    @extend .flex-aic-jcc;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+
+    svg {
+      margin-right: 6px;
+      transition: transform .3s linear;
+
+      circle {
+        fill: var(--dark_color);
+        transition: fill .3s linear;
+      }
+
+      path {
+        fill: var(--light_color);
+        transition: fill .3s linear;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.1);
+
+        circle {
+          fill: var(--light_color);
+        }
+
+        path {
+          fill: var(--dark_color);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500&family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Montserrat:wght@500&family=PT+Sans&family=Raleway:wght@400;500&display=swap');
+
+/*font-family: 'Bitter', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 900;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.container {
+  max-width: 1430px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn__red{
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--light_color);
+  background: #A62318;
+  border: 2px solid #8C1005;
+  border-radius: 4px;
+  padding: 14px 20px 15px;
+  transition: all .3s linear;
+  cursor: pointer;
+  &:hover{
+    background: linear-gradient(0deg, #8A180E, #8A180E), #002F55;
+  }
+}
+
+body {
+  font-family: 'Bitter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.flex-aic-jcfs {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+.flex-aic-jcsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-aifs-jcc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flex-aic-jcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@import '_root';
+@import '_header';
+@import '_intro';
+@import '_geography';
+@import '_reviews';
+@import '_tours';
+@import '_social_block';
+@import '_footer';

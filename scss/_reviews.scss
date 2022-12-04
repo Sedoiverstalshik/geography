@@ -1,0 +1,84 @@
+.reviews {
+  background: linear-gradient(360deg, rgba(104, 97, 65, 0.2) 0%, rgba(126, 119, 90, 0) 17.19%), #9F9776;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 65px;
+
+  &::before {
+    content: '';
+    background: url('../images/reviews_waves.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__title {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--light_color);
+    margin-bottom: 25px;
+  }
+  &__swiper{
+    padding-bottom: 80px;
+  }
+  &__slide {
+    @extend .flex-aifs-jcc;
+    gap: 37px;
+  }
+
+  &__slide-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+  }
+
+  &__slide-desc {
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 20px;
+    max-width: 775px;
+  }
+
+  &__slide-link {
+    color: #a62318;
+  }
+
+  &__slide-autor {
+    font-size: 14px;
+    line-height: 130%;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 0!important;
+    text-align: center;
+    z-index: 2;
+  }
+  &__pagination span{
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid #E4D8BC;
+    border-radius: 50%;
+    opacity: 1;
+  }
+  &__pagination span + span{
+    margin-left: 13px;
+  }
+  .reviews__pagination .swiper-pagination-bullet-active{
+    background-color: var(--light_color);
+  }
+}

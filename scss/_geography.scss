@@ -1,0 +1,104 @@
+.geography {
+  background-color: #081B2A;
+  color: var(--light_color);
+  padding-top: 38px;
+  padding-bottom: 62px;
+
+  &__title {
+    font-family: 'Bitter';
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px 15px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 437px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    transition: background-color .3s linear;
+    grid-column: span 2;
+
+    &::before {
+      content: '';
+      background: url('../images/decor.svg') no-repeat;
+      width: 31px;
+      height: 27px;
+      position: absolute;
+      top: 59%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    &:hover {
+      background-color: #A62318;
+
+      .geography__item-img {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 217px;
+    border-radius: 20px;
+    transition: border-radius .2s linear;
+
+    &:hover {
+      border-radius: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 38px;
+    line-height: 90%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__item-desc {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    max-width: 342px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+
+  &__item-big {
+    max-width: 663px;
+    grid-column: span 3;
+
+    &::before {
+      top: 62%;
+    }
+  }
+
+  &__item-big &__item-title {
+    max-width: 400px;
+  }
+
+  &__item-big &__item-desc {
+    max-width: 440px;
+  }
+
+}

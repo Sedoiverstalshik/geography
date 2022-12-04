@@ -1,0 +1,62 @@
+.social-block{
+  background: url('../images/подписка.jpg') no-repeat;
+  background-size: cover;
+  max-height: 537px;
+  height: 100%;
+  width: 100%;
+  padding-top: 152px;
+  padding-bottom: 124px;
+  &__title{
+    font-size: 45px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--dark_color);
+    margin-bottom: 15px;
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+  }
+  &__input{
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #828282;
+    background: #FFFFFF;
+    border: 2px solid #002F55;
+    border-radius: 4px;
+    padding: 13px 20px;
+    margin-right: 9px;
+    max-width: 417px;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__desc{
+    font-family: 'Montserrat Alternates';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: var(--light_color);
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 12px;
+  }
+  &__box{
+    @extend .flex-aic-jcc;
+    gap: 40px;
+  }
+  &__link{
+    @extend .flex-aic-jcc;
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    fill: var(--light_color);
+    &:hover{
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+}
