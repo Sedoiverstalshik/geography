@@ -1,5 +1,5 @@
 .social-block{
-  background: url('../images/подписка.jpg') no-repeat;
+  background: url('../images/подписка.jpg') center no-repeat;
   background-size: cover;
   max-height: 537px;
   height: 100%;
@@ -57,6 +57,38 @@
     fill: var(--light_color);
     &:hover{
       background: rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+
+
+@media(max-width:650px){
+  .social-block{
+    padding-top: 90px;
+    &__title{
+      font-size: 40px;
+    }
+    &__input{
+      font-size: 16px;
+      padding: 10px;
+      max-width: 100%;
+    }
+    &__link{
+      width: 55px;
+      height: 55px;
+      svg{
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width:550px){
+  .social-block{
+    padding-top: 55px;
+    &__form{
+      flex-direction: column;
+      gap: 10px;
     }
   }
 }

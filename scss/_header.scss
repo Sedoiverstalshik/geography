@@ -6,9 +6,8 @@
   z-index: 3;
 
   &__wrap {
-    @extend .flex-aic-jcsb;
+    @extend .flex-aic-jcc;
     gap: 15px;
-    padding: 0 125px;
   }
 
   &__menu-list {
@@ -18,7 +17,7 @@
     border-radius: 0px 0px 4px 4px;
     transition: all .3s linear;
   }
-
+   
   li {
     padding: 36px 15px 23px;
     position: relative;
@@ -53,8 +52,44 @@
     }
   }
 
+  &__burger-menu{
+    display: none;
+    width: 30px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    &::before, &::after, span{
+      content:'';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: var(--light_color);
+      border-radius: 3px;
+      transition: transform .3s linear;
+    }
+    &::before{
+      top: 0;
+    }
+    &::after{
+      bottom: 0;
+    }
+  }
+  &__burger-menu.active span{
+    display: none;
+  }
+  &__burger-menu.active::before{
+    transform: rotate(45deg);
+    top: 11px;
+  }
+  &__burger-menu.active::after{
+    transform: rotate(-45deg);
+    bottom: 11px;
+  }
   &__phone {
     @extend .flex-aic-jcc;
+    flex-shrink: 0;
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
@@ -88,5 +123,68 @@
       }
     }
   }
+  
 
+}
+
+
+@media(max-width:1150px){
+  .header{
+    padding-top: 10px;
+    &__wrap{
+      flex-wrap: wrap;
+      gap: 15px 70px;
+    }
+    &__menu{
+      order: 1;
+    }
+  }
+}
+
+@media(max-width:650px){
+  .header{
+    &__wrap{
+      justify-content: space-between;
+    }
+    &__menu{
+      display: none;
+    }
+    &__menu.active {
+      display: block;
+    }
+    &__menu-list{
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      background-color: #274B63;
+      li{
+        padding: 20px;
+      }
+    }
+    
+    &__burger-menu{
+      display: block;
+      margin-left: 30px;
+    }
+
+    &__phone{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  
+}
+@media(max-width:450px){
+  .header{
+    &__logo{
+      width: 190px;
+    }
+    &__burger-menu{
+      margin-left: 0;
+    }
+  }
 }

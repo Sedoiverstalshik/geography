@@ -28,12 +28,10 @@
       color: var(--light_color);
     }
   }
-  &__social{
-    @extend .flex-aic-jcfs;
-  }
   &__social-link{
     fill: var(--light_color);
     margin-right: 25px;
+    vertical-align: middle;
     transition: fill .3s linear;
     &:hover{
       fill: rgba(255, 255, 255, 0.6);
@@ -47,6 +45,7 @@
     color: var(--light_color);
     padding: 10px 10px 10px 35px;
     position: relative;
+    display: inline-block;
     &::before{
       content: "";
       background: url(../images/label.svg);
@@ -89,5 +88,41 @@
   }
   a:hover{
     color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media(max-width:1000px){
+  .footer{
+    &__wrap{
+      align-items: flex-start;
+    }
+    &__menu-list{
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+    }
+  }
+}
+@media(max-width:700px){
+  .footer{
+    &__wrap{
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      text-align: center;
+    }
+    &__menu-list{
+      align-items: center;
+    }
+  }
+}
+@media(max-width:400px){
+  .footer{
+    &__social-link{
+      margin-right: 10px;
+    }
+    &__privacy-policy, &__copy{
+      text-align: center;
+    }
   }
 }

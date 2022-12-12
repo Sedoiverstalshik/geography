@@ -111,3 +111,15 @@ body {
 @import '_tours';
 @import '_social_block';
 @import '_footer';
+
+
+.none{
+  display: none;
+}
+
+@media(max-width:650px){
+  .btn__red{
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
