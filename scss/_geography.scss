@@ -3,6 +3,8 @@
   color: var(--light_color);
   padding-top: 38px;
   padding-bottom: 62px;
+  position: relative;
+  z-index: 3;
 
   &__title {
     font-family: 'Bitter';

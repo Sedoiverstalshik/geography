@@ -321,8 +321,8 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
-  height: 80px;
+  bottom: -3px;
+  height: 90px;
   width: 100%;
   z-index: 1;
 }
@@ -330,6 +330,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 600px;
 }
 .intro__swiper-slide {
   width: 100%;
@@ -356,12 +357,12 @@ body {
   line-height: 90%;
   text-align: center;
   color: var(--light_color);
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 0 15px;
 }
 .intro__pagination {
   position: absolute;
-  bottom: 80px !important;
+  bottom: 85px !important;
   text-align: center;
   z-index: 2;
 }
@@ -407,6 +408,8 @@ body {
   color: var(--light_color);
   padding-top: 38px;
   padding-bottom: 62px;
+  position: relative;
+  z-index: 3;
 }
 .geography__title {
   font-family: "Bitter";
@@ -785,7 +788,7 @@ body {
 }
 @media (max-width: 400px) {
   .tours__swiper {
-    padding: 0 15px;
+    padding: 10px 15px;
     max-width: 320px;
   }
 }
@@ -891,15 +894,16 @@ body {
   padding-top: 43px;
   padding-bottom: 47px;
   position: relative;
+  z-index: 3;
 }
 .footer::before {
   content: "";
   background: url("../images/footer_waves.svg") no-repeat;
   background-size: cover;
   width: 100%;
-  height: 90px;
+  height: 83px;
   position: absolute;
-  top: -80px;
+  top: -70px;
   left: 0;
 }
 .footer__info {
