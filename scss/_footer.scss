@@ -38,6 +38,9 @@
       fill: rgba(255, 255, 255, 0.6);
     }
   }
+  &__social{
+    position: relative;
+  }
   &__social-label{
     font-family: 'Montserrat Alternates';
     font-weight: 400;
@@ -45,7 +48,9 @@
     line-height: 17px;
     color: var(--light_color);
     padding: 10px 10px 10px 35px;
-    position: relative;
+    position: absolute;
+    top: -7px;
+    width: 100%;
     display: inline-block;
     &::before{
       content: "";
@@ -112,8 +117,15 @@
       gap: 50px;
       text-align: center;
     }
+    &__social{
+      text-align: left;
+    }
     &__menu-list{
       align-items: center;
+    }
+    
+    &__privacy-policy, &__copy{
+      text-align: center;
     }
   }
 }
@@ -121,9 +133,6 @@
   .footer{
     &__social-link{
       margin-right: 10px;
-    }
-    &__privacy-policy, &__copy{
-      text-align: center;
     }
   }
 }

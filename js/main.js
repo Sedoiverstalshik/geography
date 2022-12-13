@@ -41,6 +41,7 @@ const reviews__slider = new Swiper('.reviews__swiper', {
 const tours__slider = new Swiper('.tours__swiper', {
   loop: true,
   centeredSlides: true,
+  slidesPerView: "auto",
   spaceBetween: 70,
   grabCursor: true,
   breakpoints: {
